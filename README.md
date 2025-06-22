@@ -63,22 +63,6 @@
 
 ---
 
-## 📊 Estadísticas de GitHub
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=eduardochamizo&show_icons=true&theme=tokyonight&count_private=true" alt="GitHub Stats" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eduardochamizo&layout=compact&theme=tokyonight" alt="Top Languages" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=eduardochamizo&theme=tokyonight" alt="GitHub Streak" />
-</div>
-
----
-
 ## 🎓 Educación & Certificaciones
 
 🎓 **Grado en Estadística** - Universidad de Sevilla (2021-2025)  
