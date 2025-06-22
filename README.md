@@ -25,8 +25,7 @@
 ### 🤖 Machine Learning & AI
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Caret](https://img.shields.io/badge/Caret-007ACC?style=for-the-badge&logo=r&logoColor=white)
 
 ### 📊 Análisis de Datos
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
@@ -108,10 +107,4 @@
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=eduardochamizo&color=blueviolet&style=flat-square&label=Profile+Views" alt="Profile Views" />
-</div>
-
-<div align="center">
-  
-  ### 💡 "La estadística es la gramática de la ciencia" - Karl Pearson
-  
 </div>
