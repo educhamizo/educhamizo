@@ -44,7 +44,7 @@
 ## 🔥 Proyectos Destacados
 
 ### 🧠 [Generative Adversarial Networks (GANs)](https://github.com/eduardochamizo/gan-implementation)
-**Trabajo de Fin de Grado** | *TensorFlow, Keras, Python*
+*TensorFlow, Keras, Python*
 - Implementación de redes neuronales generativas adversarias para generación de imágenes
 - Aplicación de técnicas de deep learning y redes convolucionales
 - Investigación académica con revisión bibliográfica completa
