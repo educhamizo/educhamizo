@@ -1,4 +1,4 @@
-# Predicción de Ingresos (>50K) con XGBoost en R
+# Predicción de ingresos (>50K) con XGBoost en R
 
 Este proyecto construye un modelo de clasificación binaria para predecir si una persona gana más de $50,000 anuales utilizando datos del censo (Adult Dataset de OpenML).
 
@@ -23,16 +23,4 @@ Este proyecto construye un modelo de clasificación binaria para predecir si una
 
 - Histograma de ingresos por edad
 - Comparativa de ingresos por nivel educativo
-
-## ▶️ Cómo correr el proyecto
-
-1. Instala las librerías requeridas
-2. Ejecuta el archivo `PrediccionIngresos.Rmd`
-3. Se generará un PDF o HTML con el análisis completo
-
----
-
-¡Puedes usar este README directamente o pedir que te lo personalice más!
-
-¿Quieres que te cree el archivo o lo exporte por ti?
 
