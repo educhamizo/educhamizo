@@ -1,0 +1,258 @@
+---
+title: "Nobel Project"
+author: "Eduardo Chamizo"
+date: "2025-06-17"
+output: pdf_document
+---
+# Resumen 
+
+Este proyecto indaga en las técnicas propias para la visualización y análisis
+exploratorio del conjunto de datos "Nobel Prize", empleando diversas librerías 
+para su consecución.
+
+## Objetivo del problema
+
+Explicar los datos de manera tabular y visual, analizando patrones significativos
+y otros resultados destacables.
+
+# Librerías 
+
+- httr: conexión con APIs.
+- jsonlite: maneja datos JSON.
+- lubridate: manejo de fechas.
+- dplyr: manipulación de datos.
+- ggplot2: gráficos.
+- tidyverse: conjunto de paquetes.
+- maps: datos geográficos.
+- countrycode: codificación de países.
+- tidytext: análisis de texto.
+- wordcloud: nubes de texto.
+
+
+```{r,message=FALSE,warning=FALSE}
+library(httr)
+library(jsonlite)
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+library(tidyverse)
+library(maps)
+library(countrycode)
+library(tidytext)
+library(wordcloud)
+```
+
+# Carga de datos desde el API
+
+```{r}
+url_laureados <- "http://api.nobelprize.org/v1/laureate.csv"
+
+queryString_laureados <- list(gender = "All")
+
+response_laureados <- VERB("GET", url_laureados, query = queryString_laureados, content_type("application/octet-stream"), accept("application/json"))
+
+df_laureados <- read.csv(textConnection(content(response_laureados, "text")), 
+                         stringsAsFactors = FALSE)
+
+df_laureados<-df_laureados[c(-1,-9,-10,-11,-15,-16)]
+
+df_final<-df_laureados
+```
+
+# Procesamiento de datos
+
+## Limpieza inicial
+
+### Cambiar strings vacíos por NAs
+
+```{r}
+columnasstringvacions <- c(colnames(df_final))
+
+df_final[columnasstringvacions] <- lapply(df_final[columnasstringvacions], 
+                                          function(x) ifelse(x == "", NA, x))
+
+df_final <- df_final[df_final$gender=="male" | df_final$gender=="female", ]
+```
+
+## Estandarización de nomenclatura de algunas columnas
+
+### Columnas con fechas
+
+```{r,warning=FALSE,message=FALSE}
+df_final$born <- ymd(df_final$born)
+
+df_final$died <- ymd(df_final$died)
+
+df_final$year <- ymd(paste0(df_final$year, "-01-01"))
+
+df_final$age_at_death <- trunc(as.numeric(difftime(df_final$died, df_final$born,
+                                                   units = "days")) / 365.25)
+df_final$age_at_prize<-trunc(as.numeric(difftime(df_final$year,df_final$born,
+                                                 units = "days"))/365.25)
+```
+
+### Renombrar algunos países
+
+```{r}
+df_final$bornCountry <- sub(".*\\(now ([^)]+)\\)", "\\1", df_final$bornCountry)
+
+df_final <- df_final %>%
+  mutate(
+    bornCountry = case_when(
+      bornCountry %in% c("England", "Scotland", "Wales", "Northern Ireland", "UK", "United Kingdom", "Great Britain") ~ "UK",
+      bornCountry %in% c("USA", "U.S.", "U.S.A.", "United States", "United States of America") ~ "USA",
+      bornCountry == "Faroe Islands (Denmark)" ~ "Denmark",
+      bornCountry == "East Timor" ~ "Timor-Leste",
+      bornCountry == "Guadeloupe France" ~ "France",
+      bornCountry == "Trinidad and Tobago" ~ "Trinidad and Tobago",
+      bornCountry == "the Netherlands" ~ "Netherlands",
+      TRUE ~ bornCountry
+    )
+  )
+```
+
+Quitamos el "now" en el nombre de ex-países y sustituimos por el nombre final. Ello se realiza para facilitar la codificación posterior, necesaria para mostrar visualmente los países.
+
+# Análisis exploratorio
+
+## Estadísticas básicas
+
+```{r}
+summary(df_final[, c("born", "died", "year", "age_at_death")])
+```
+
+## Métricas cuantitativas por género
+
+```{r}
+df_final %>%
+  group_by(gender) %>%
+  summarise(
+    mean_age_death = mean(age_at_death, na.rm = T),
+    min_age_death = min(age_at_death, na.rm = T),
+    max_age_death = max(age_at_death, na.rm = T),
+    mean_age_prize = mean(age_at_prize,na.rm = T),
+    min_age_prize = min(age_at_prize,na.rm=T),
+    max_age_prize = max(age_at_prize,na.rm = T),
+    n = n()
+  )
+```
+Destaca la aplastante presencia varonil frente a la de mujeres. También, el hecho de que los hombres experimentan los dos eventos estudiados con posterioridad.
+
+## Top países con más apariciones
+
+```{r,message=FALSE}
+paises_top <- df_final %>%
+  count(bornCountry, sort=T) %>%
+  top_n(20)
+
+paises_top
+```
+Las principales potencias históricas son las que coronan el encabezado.
+
+## Diversidad geográfica
+
+```{r}
+df_final %>%
+  group_by(category) %>%
+  summarise(
+    n_paises = n_distinct(bornCountry),
+    pais_dominante = names(sort(table(bornCountry), decreasing=T))[1])
+```
+
+# Visualización de datos
+
+## Pirámide de edades por género
+
+```{r,message=FALSE,warning=FALSE}
+ggplot(df_final, aes(age_at_prize, fill=gender)) +
+  geom_histogram(alpha=0.7, position="identity") +
+  facet_wrap(~gender, scales="free_y") +
+  labs(title="Distribución de edad al recibir el premio")
+```
+Se confirma con este gráfico lo que anteriormente se concluía de manera tabular.
+
+## Boxplot de edades por categoría y género
+
+```{r,message=FALSE,warning=FALSE}
+ggplot(df_final, aes(category, age_at_prize, fill=gender)) +
+  geom_boxplot() +
+  coord_flip() +
+  labs(title="Edad al premio por categoría y género")
+```
+La edad de premiación típica oscila entre los 25 y 70 años. Especialmente en física, hay más jóvenes premiados que en otras categorías.
+
+## Longevidad post-premio
+
+```{r}
+df_final %>%
+  filter(!is.na(age_at_death)) %>%
+  mutate(años_despues_premio = age_at_death - age_at_prize) %>%
+  ggplot(aes(category, años_despues_premio)) +
+  geom_boxplot(width=0.1) +
+  coord_flip()
+```
+Los físicos/as, al soler recibir el premio más prematuramente como se vio antes, tienden a durar más. Esta afirmación nos hace pensar que el gráfico es consistente con el anterior.
+
+## Gráfico de líneas para la variación de la edad promedio al recibir el premio
+
+```{r,warning=FALSE,message=FALSE}
+df_final %>%
+  group_by(year, category) %>%
+  summarise(mean_age = mean(age_at_prize, na.rm=T)) %>%
+  ggplot(aes(year, mean_age, color=category)) +
+  geom_smooth(method="loess") +
+  facet_wrap(~category) +
+  labs(title="Evolución de la edad promedio al recibir el premio")
+```
+Mientras la tendencia general ha sido que los premiados cada vez sean más longevos, algo que podría achacarse a la mayor esperanza de vida; destacan los premiados por la paz, posiblemente fundamentado en el mayor componente activista que caracteriza a los jóvenes.
+
+## Mapa mundial
+
+```{r}
+world_map <- map_data("world") %>%
+  mutate(region = case_when(
+    region == "USA" ~ "United States",
+    region == "UK" ~ "United Kingdom",
+    TRUE ~ region))
+
+nobel_by_country <- df_final %>%
+  count(bornCountry) %>%
+  mutate(
+    region = case_when(
+      TRUE ~ countrycode(bornCountry, "country.name", "country.name", warn = FALSE))) %>%
+  filter(!is.na(region))
+
+world_nobel <- world_map %>%
+  left_join(nobel_by_country, by = "region")
+
+ggplot(world_nobel, aes(long, lat, group = group, fill = n)) +
+  geom_polygon() +
+  scale_fill_viridis_c(na.value = "grey90") +
+  theme_void() +
+  labs(title = "Distribución mundial de premios Nobel por país de nacimiento")
+```
+Visualización gráfica del número de premios por país.
+
+# Análisis de texto
+
+## Nube de texto según la categoría del premio (en nuestro caso "peace")
+
+```{r,message=FALSE}
+motivaciones_words <- df_final %>%
+  unnest_tokens(word, motivation) %>%
+  anti_join(stop_words) %>%
+  count(category, word, sort=T)
+
+motivaciones_words %>%
+  filter(category == "peace") %>%
+  with(wordcloud(word, n, max.words=50))
+```
+Las palabras más frecuentes son "peace", "international" y "efforts". Esto concuerda con la coyuntura en que muchos de estos premios se otorgaron: tras dos guerras mundiales, la creación de la ONU, descolonización... Resulta interesante mencionar también la aparición de la palabra "nuclear" en un contexto ajeno a la física o química.
+
+# Conclusiones
+
+- Se puede establecer una tendencia temporal en algunas de las características estudiadas, como la edad al recibir el premio.
+- El mapa facilita mucho el reconocimiento de potencias no sólo históricas y económicas, sino también intelectuales.
+
+
+
