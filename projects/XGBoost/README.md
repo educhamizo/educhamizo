@@ -11,16 +11,16 @@ Este proyecto construye un modelo de clasificación binaria para predecir si una
 ## ⚙️ Herramientas
 
 - Lenguaje: R
-- Librerías: `xgboost`, `dplyr`, `ggplot2`, `OpenML`
+- Librerías: xgboost, dplyr, ggplot2, OpenML
+
+## 📈 Visualizaciones
+
+- Histograma de ingresos por edad
+- Comparativa de ingresos por nivel educativo
 
 ## 📊 Resultados
 
 - **Precisión en test**: 82.9%
 - **AUC ROC**: 0.88
 - Variables más influyentes: estado civil, educación, ocupación
-
-## 📈 Visualizaciones
-
-- Histograma de ingresos por edad
-- Comparativa de ingresos por nivel educativo
 
