@@ -1,0 +1,90 @@
+[{
+    "_id": "El Silencio",
+    "fundacion": 1340,
+    "sedes_anteriores": ["Calle Feria 98", "Calle Parlamento de Andalucía", "Calle Rioja"],
+    "personas_hermanas": [
+      { "dni": "12345678A", "nombre": "Manuel", "apellidos": "García Pérez" },
+      { "dni": "23456789B", "nombre": "Ana", "apellidos": "Ramos Ortiz" },
+      { "dni": "34567890C", "nombre": "Antonio", "apellidos": "Jiménez Ruiz" },
+      { "dni": "45678901D", "nombre": "María", "apellidos": "López Castro" },
+      { "dni": "56789012E", "nombre": "Francisco", "apellidos": "Solís Vega" },
+      { "dni": "67890123F", "nombre": "Elena", "apellidos": "Blanco Sanz" }
+    ]
+  },
+  {
+    "_id": "La Macarena",
+    "fundacion": 1595,
+    "sedes_anteriores": ["Calle Antonio Susillo", "Calle San Luis 125"],
+    "personas_hermanas": [
+      { "dni": "89012345H", "nombre": "Rocío", "apellidos": "Méndez Cruz" },
+      { "dni": "90123456I", "nombre": "David", "apellidos": "Sánchez Gil" },
+      { "dni": "01234567J", "nombre": "Isabel", "apellidos": "Torres Mora" },
+      { "dni": "11223344K", "nombre": "Carlos", "apellidos": "Martínez León" },
+      { "dni": "22334455L", "nombre": "Lucía", "apellidos": "Fernández Soto" },
+      { "dni": "33445566M", "nombre": "Javier", "apellidos": "Gómez Herrera" },
+      { "dni": "44556677N", "nombre": "Carmen", "apellidos": "Vázquez Pardo" }
+    ]
+  },
+  {
+    "_id": "Gran Poder",
+    "fundacion": 1431,
+    "sedes_anteriores": ["Plaza de San Lorenzo s/n"],
+    "personas_hermanas": [
+      { "dni": "55667788O", "nombre": "Sergio", "apellidos": "Pascual Domínguez" },
+      { "dni": "88990011R", "nombre": "Beatriz", "apellidos": "Galán Prieto" },
+      { "dni": "99001122S", "nombre": "Marcos", "apellidos": "Ferrer Calvo" },
+      { "dni": "10203040T", "nombre": "Silvia", "apellidos": "Duran Suero" },
+      { "dni": "20304050U", "nombre": "Adrián", "apellidos": "Hidalgo Moya" }
+    ]
+  },
+  {
+    "_id": "La Carretería",
+    "fundacion": 1550,
+    "sedes_anteriores": ["Calle Orfila", "Plaza del Duque s/n", "Calle Jesús del Gran Poder 40"],
+    "personas_hermanas": [
+      { "dni": "30405060V", "nombre": "Marta", "apellidos": "Rubio Salgado" },
+      { "dni": "40506070W", "nombre": "Hugo", "apellidos": "Peña Montes" },
+      { "dni": "12345678A", "nombre": "Manuel", "apellidos": "García Pérez" },
+      { "dni": "23456789B", "nombre": "Ana", "apellidos": "Ramos Ortiz" },
+      { "dni": "34567890C", "nombre": "Antonio", "apellidos": "Jiménez Ruiz" },
+      { "dni": "45678901D", "nombre": "María", "apellidos": "López Castro" },
+      { "dni": "56789012E", "nombre": "Francisco", "apellidos": "Solís Vega" }
+    ]
+  },
+  {
+    "_id": "El Amor",
+    "fundacion": 1608,
+    "personas_hermanas": [
+      { "dni": "67890123F", "nombre": "Elena", "apellidos": "Blanco Sanz" },
+      { "dni": "78901234G", "nombre": "José", "apellidos": "Naranjo Lara" },
+      { "dni": "89012345H", "nombre": "Rocío", "apellidos": "Méndez Cruz" },
+      { "dni": "90123456I", "nombre": "David", "apellidos": "Sánchez Gil" },
+      { "dni": "01234567J", "nombre": "Isabel", "apellidos": "Torres Mora" },
+      { "dni": "11223344K", "nombre": "Carlos", "apellidos": "Martínez León" },
+      { "dni": "22334455L", "nombre": "Lucía", "apellidos": "Fernández Soto" }
+    ]
+  },
+  {
+    "_id": "La Estrella",
+    "fundacion": 1560,
+    "sedes_anteriores": ["Calle Pagés del Corro 88", "Próxima a Los Remedios"],
+    "personas_hermanas": [
+      { "dni": "33445566M", "nombre": "Javier", "apellidos": "Gómez Herrera" },
+      { "dni": "44556677N", "nombre": "Carmen", "apellidos": "Vázquez Pardo" },
+      { "dni": "55667788O", "nombre": "Sergio", "apellidos": "Pascual Domínguez" },
+      { "dni": "66778899P", "nombre": "Patricia", "apellidos": "Ibáñez Beltrán" }
+    ]
+  },
+  {
+    "_id": "Las Cigarreras",
+    "sedes_anteriores": ["Calle Calatrava", "Calle María Auxiliadora 18", "Calle Cristo del Calvario", "Calle Jesús del Gran Poder 40", "Calle Doña María Coronel 1", "Calle Sol 12", "Plaza Jesús de la Redención 0", "Calle San Fernando 19"],
+    "personas_hermanas": [
+      { "dni": "10203040T", "nombre": "Silvia", "apellidos": "Duran Suero" },
+      { "dni": "20304050U", "nombre": "Adrián", "apellidos": "Hidalgo Moya" },
+      { "dni": "30405060V", "nombre": "Marta", "apellidos": "Rubio Salgado" },
+      { "dni": "40506070W", "nombre": "Hugo", "apellidos": "Peña Montes" },
+      { "dni": "12345678A", "nombre": "Manuel", "apellidos": "García Pérez" },
+      { "dni": "23456789B", "nombre": "Ana", "apellidos": "Ramos Ortiz" },
+      { "dni": "34567890C", "nombre": "Antonio", "apellidos": "Jiménez Ruiz" }
+    ]}
+]

@@ -1,0 +1,156 @@
+[
+  {
+    "_id": "Prehistoria",
+    "año_inicio": null,
+    "hitos_clave": [
+      "Revolución Neolítica",
+      "Dominio del fuego",
+      "Construcciones megalíticas"
+    ],
+    "personajes_relevantes": [
+      { "nombre": "Homo Antecessor", "rol": "Primeros pobladores", "estado": "fallecido" },
+      { "nombre": "Hombre de Cro-Magnon", "rol": "Humano moderno", "estado": "fallecido" }
+    ]
+  },
+  {
+    "_id": "Edad Antigua",
+    "año_inicio": -3500,
+    "hitos_clave": [
+      "Invención de la escritura",
+      "Fundación de Ispal",
+      "Romanización",
+      "Construcción del Coliseo",
+      "Surgimiento de la Democracia en Atenas"
+    ],
+    "personajes_relevantes": [
+      { "nombre": "Julio César", "rol": "Dictador", "estado": "fallecido" },
+      { "nombre": "Plinio el Viejo", "rol": "Escritor", "estado": "fallecido" },
+      { "nombre": "Trajano", "rol": "Emperador", "estado": "fallecido" },
+      { "nombre": "Cleopatra VII", "rol": "Reina", "estado": "fallecido" }
+    ]
+  },
+  {
+    "_id": "Edad Media",
+    "año_inicio": 476,
+    "hitos_clave": [
+      "Caída de Roma",
+      "Conquista Omeya",
+      "Reconquista de Sevilla",
+      "Coronación de Carlomagno",
+      "Peste Negra"
+    ],
+    "personajes_relevantes": [
+      { "nombre": "Al-Mutamid", "rol": "Rey", "estado": "fallecido" },
+      { "nombre": "Alfonso X el Sabio", "rol": "Rey", "estado": "fallecido" }
+    ]
+  },
+  {
+    "_id": "Renacimiento",
+    "año_inicio": 1492,
+    "hitos_clave": [
+      "Descubrimiento de América",
+      "Puerto de Indias",
+      "Humanismo",
+      "Invención de la Imprenta",
+      "Reforma Protestante"
+    ],
+    "personajes_relevantes": [
+      { "nombre": "Carlos V", "rol": "Emperador", "estado": "fallecido" },
+      { "nombre": "Pietro Torrigiano", "rol": "Escultor", "estado": "fallecido" },
+      { "nombre": "Leonardo da Vinci", "rol": "Polímata", "estado": "fallecido" },
+      { "nombre": "Cristóbal Colón", "rol": "Navegante", "estado": "fallecido" }
+    ]
+  },
+  {
+    "_id": "Barroco",
+    "año_inicio": 1600,
+    "hitos_clave": [
+      "Siglo de Oro",
+      "Gran Peste de Sevilla",
+      "Esplendor de las Cofradías",
+      "Guerra de los Treinta Años"
+    ],
+    "personajes_relevantes": [
+      { "nombre": "Murillo", "rol": "Pintor", "estado": "fallecido" },
+      { "nombre": "Juan Martínez Montañés", "rol": "Escultor", "estado": "fallecido" },
+      { "nombre": "Miguel de Mañara", "rol": "Filántropo", "estado": "fallecido" },
+      { "nombre": "Velázquez", "rol": "Pintor", "estado": "fallecido" }
+    ]
+  },
+  {
+    "_id": "Ilustración",
+    "año_inicio": 1715,
+    "hitos_clave": [
+      "Siglo de las Luces",
+      "Fundación de la Real Academia",
+      "Reformas de Olavide",
+      "Revolución Industrial (inicios)"
+    ],
+    "personajes_relevantes": [
+      { "nombre": "Pablo de Olavide", "rol": "Político", "estado": "fallecido" },
+      { "nombre": "Goya", "rol": "Pintor", "estado": "fallecido" },
+      { "nombre": "Isaac Newton", "rol": "Físico y matemático", "estado": "fallecido" }
+    ]
+  },
+  {
+    "_id": "Edad Contemporánea I (Siglo XIX)",
+    "año_inicio": 1789,
+    "hitos_clave": [
+      "Guerra de Independencia",
+      "Romanticismo",
+      "Constitución de 1812",
+      "Batalla de Trafalgar"
+    ],
+    "personajes_relevantes": [
+      { "nombre": "Gustavo Adolfo Bécquer", "rol": "Poeta", "estado": "fallecido" },
+      { "nombre": "Lord Byron", "rol": "Viajero Romántico", "estado": "fallecido" },
+      { "nombre": "Napoleón Bonaparte", "rol": "Emperador", "estado": "fallecido" }
+    ]
+  },
+  {
+    "_id": "Edad Contemporánea II (Siglo XX)",
+    "año_inicio": 1900,
+    "hitos_clave": [
+      "Exposición de 1929",
+      "Generación del 27",
+      "Guerra Civil",
+      "Segunda Guerra Mundial",
+      "Llegada del hombre a la Luna"
+    ],
+    "personajes_relevantes": [
+      { "nombre": "Aníbal González", "rol": "Arquitecto", "estado": "fallecido" },
+      { "nombre": "Federico García Lorca", "rol": "Poeta", "estado": "fallecido" }
+    ]
+  },
+  {
+    "_id": "Era de la Transición",
+    "año_inicio": 1975,
+    "hitos_clave": [
+      "Llegada de la Democracia",
+      "Estatuto de Autonomía de Andalucía",
+      "Expo 92",
+      "Caída del Muro de Berlín"
+    ],
+    "personajes_relevantes": [
+      { "nombre": "Adolfo Suárez", "rol": "Político", "estado": "fallecido" },
+      { "nombre": "Curro", "rol": "Mascota Oficial Expo 92", "estado": "fallecido" },
+      { "nombre": "Felipe González", "rol": "Político", "estado": "vivo" },
+      { "nombre": "Rey Juan Carlos I", "rol": "Rey", "estado": "vivo" }
+    ]
+  },
+  {
+    "_id": "Era Digital",
+    "año_inicio": 2000,
+    "hitos_clave": [
+      "Expansión de Internet",
+      "Redes Sociales",
+      "Inteligencia Artificial",
+      "Pandemia COVID-19",
+      "Criptomonedas"
+    ],
+    "personajes_relevantes": [
+      { "nombre": "Steve Jobs", "rol": "Empresario", "estado": "fallecido" },
+      { "nombre": "Elon Musk", "rol": "Empresario", "estado": "vivo" }
+    ]
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "_id": "12345678A",
+    "nombre": "Manuel García",
+    "hermano de": [
+      { "hermandad": "Gran Poder", "numero_hermano": 124 },
+      { "hermandad": "La Macarena", "numero_hermano": 3502 }
+    ]
+  },
+  {
+    "_id": "23456789B",
+    "nombre": "Ana Ramos"
+  },
+  {
+    "_id": "34567890C",
+    "nombre": "Antonio Jiménez",
+    "hermano de": [
+      { "hermandad": "La Estrella", "numero_hermano": 889 },
+      { "hermandad": "San Gonzalo", "numero_hermano": 67 }
+    ]
+  },
+  {
+    "_id": "45678901D",
+    "nombre": "María López",
+    "hermano de": [
+      { "hermandad": "Esperanza de Triana", "numero_hermano": 342 }
+    ]
+  },
+  {
+    "_id": "56789012E",
+    "nombre": "Francisco Solís",
+    "hermano de": [
+      { "hermandad": "Los Negritos", "numero_hermano": 15 }
+    ]
+  },
+  {
+    "_id": "67890123F",
+    "nombre": "Elena Blanco",
+    "hermano de": [
+      { "hermandad": "La Carretería", "numero_hermano": 921 }
+    ]
+  },
+  {
+    "_id": "78901234G",
+    "nombre": "José Naranjo",
+    "hermano de": [
+      { "hermandad": "El Cachorro", "numero_hermano": 23 },
+      { "hermandad": "El Amor" }
+    ]
+  },
+  {
+    "_id": "89012345H",
+    "nombre": "Rocío Méndez",
+    "hermano de": [
+      { "hermandad": "La Macarena", "numero_hermano": 102 }
+    ]
+  },
+  {
+    "_id": "90123456I",
+    "nombre": "David Sánchez",
+    "hermano de": [
+      { "hermandad": "El Silencio", "numero_hermano": 67 }
+    ]
+  },
+  {
+    "_id": "01234567J",
+    "nombre": "Isabel Torres",
+    "hermano de": [
+      { "hermandad": "Esperanza de Triana", "numero_hermano": 5 },
+      { "hermandad": "Los Negritos", "numero_hermano": 88 }
+    ]
+  },
+  {
+    "_id": "11223344K",
+    "nombre": "Carlos Martínez León",
+    "hermano de": [
+      { "hermandad": "El Silencio", "numero_hermano": 12 },
+      { "hermandad": "La Carretería", "numero_hermano": 88 }
+    ]
+  },
+  {
+    "_id": "40506070W",
+    "nombre": "Hugo Peña Montes",
+    "hermano de": [
+      { "hermandad": "Las Cigarreras", "numero_hermano": 234 },
+      { "hermandad": "El Amor", "numero_hermano": 15 },
+      { "hermandad": "La Estrella", "numero_hermano": 1042 }
+    ]
+  },
+  {
+    "_id": "10203040T",
+    "nombre": "Silvia Duran Suero",
+    "hermano de": [
+      { "hermandad": "San Gonzalo", "numero_hermano": 8 }
+    ]
+  },
+  {
+    "_id": "20304050U",
+    "nombre": "Adrián Hidalgo Moya",
+    "hermano de": [
+      { "hermandad": "El Cachorro", "numero_hermano": 441 }
+    ]
+  },
+  {
+    "_id": "30405060V",
+    "nombre": "Marta Rubio Salgado",
+    "hermano de": [
+      { "hermandad": "La Macarena", "numero_hermano": 2500 },
+      { "hermandad": "La Carretería", "numero_hermano": 12 }
+    ]
+  }
+]
