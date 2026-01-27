@@ -1,4 +1,4 @@
-# Proyecto Final: Gestión de Hermandades y Épocas Históricas
+# Gestión de Hermandades y Épocas Históricas
 
 Este repositorio contiene la base de datos de mi proyecto de fin de módulo, enfocado en el mundo cofrade y su contexto histórico. El trabajo se divide en dos partes: una implementación relacional en **MySQL** y otra no relacional en **MongoDB (NoSQLBooster)**.
 
