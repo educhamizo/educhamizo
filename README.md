@@ -6,7 +6,8 @@
 
 ## 🚀 Sobre mí
 
-🎓 **Estudiante de Estadística** en Universidad de Sevilla  
+🎓 **Estudiante de Máster en Inteligencia Artificial, Lógica y Computación** en Universidad de Sevilla
+🎓 **Graduado en Estadística** en Universidad de Sevilla  
 🇮🇹 **Exchange Student** en Politecnico di Milano (2023-2024)  
 🤖 **Especializándome en**: Machine Learning, Deep Learning y Computer Vision  
 📊 **Apasionado por**: Análisis de datos, Inteligencia Artificial y Estadística Aplicada  
